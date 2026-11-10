@@ -2,8 +2,8 @@
   "name": "chatbotx-monorepo",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
+    "build": "node init && turbo build",
+    "dev": "node init && turbo dev",
     "fix": "ultracite fix --unsafe",
     "check-types": "turbo run check-types --concurrency=2",
     "check-types:cold": "turbo run check-types --concurrency=1",

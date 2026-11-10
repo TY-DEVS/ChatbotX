@@ -11,7 +11,7 @@
     "./thread-control": "./src/thread-control.ts"
   },
   "scripts": {
-    "build": "tsdown",
+    "build": "node init && tsdown",
     "check-types": "tsc --noEmit",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest"

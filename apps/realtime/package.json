@@ -4,8 +4,8 @@
   "type": "module",
   "scripts": {
     "check-types": "tsc --noEmit",
-    "dev": "dotenv -e ../../.env -- tsx src/main.ts",
-    "start": "tsx src/main.ts",
+    "dev": "node init && dotenv -e ../../.env -- tsx src/main.ts",
+    "start": "node init && tsx src/main.ts",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest"
   },

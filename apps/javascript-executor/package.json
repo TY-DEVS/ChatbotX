@@ -4,10 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsdown",
+    "build": "node init && tsdown",
     "check-types": "tsc --noEmit",
-    "dev": "dotenv -e ../../.env -- tsx --watch src/index.ts",
-    "start": "node dist/index.mjs",
+    "dev": "node init && dotenv -e ../../.env -- tsx --watch src/index.ts",
+    "start": "node init && node dist/index.mjs",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest"
   },

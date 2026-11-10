@@ -18,11 +18,11 @@
     "chatbotx": "./dist/index.cjs"
   },
   "scripts": {
-    "build": "tsdown",
+    "build": "node init && tsdown",
     "check-types": "tsc --noEmit",
-    "dev:cli": "tsx src/index.ts",
-    "prepublishOnly": "node --input-type=commonjs -e \"const v=require('./package.json').version; if (v === '0.0.0-dev') { console.error('chatbotx: version is the 0.0.0-dev placeholder — publish via .github/workflows/publish-cli.yml'); process.exit(1) }\"",
-    "start": "node ./dist/index.cjs",
+    "dev:cli": "node init && tsx src/index.ts",
+    "prepublishOnly": "node --input-type=commonjs -e \"const v=require('./package.json').version; if (v === '0.0.0-dev') { console.error('chatbotx: version is the 0.0.0-dev placeholder \u2014 publish via .github/workflows/publish-cli.yml'); process.exit(1) }\"",
+    "start": "node init && node ./dist/index.cjs",
     "test": "vitest run --passWithNoTests",
     "test:watch": "vitest"
   },
